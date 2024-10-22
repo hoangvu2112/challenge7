@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Streaming Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
+
+    <link rel="stylesheet" href="/styles/head.css" />
+    <link rel="stylesheet" href="/styles/sm.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="/logo/Mediamodifier-Design.svg" alt="Tidal Logo" />
+        </div>
+        <div class="header__nav">
+          <div class="header__main">
+            <a href="#" class="header__nav-item">About</a>
+            <a href="#" class="header__nav-item">Support</a>
+            <a href="#" class="header__nav-item">Log in</a>
+          </div>
+          <div class="header__sub">
+            <button class="header__button">Start Free Trial</button>
+          </div>
+        </div>
+      </div>
+      <div class="header__container--mobile">
+        <!-- Logo và Hamburger Icon -->
+        <div class="header__top">
+          <div class="header__logo">
+            <svg
+              width="127px"
+              height="100%"
+              viewBox="0 0 160 22"
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              class="tidal-header-logo--image"
+              data-v-6e95c164=""
+            >
+              <path
+                d="M58.2177 21.1555H54.1108V6.58787H48.7992V3.06799H63.5293V6.58787H58.2177V21.1555Z"
+                data-v-6e95c164=""
+              ></path>
+              <path
+                d="M75.819 21.1553H79.9501V3.06799H75.819V21.1553Z"
+                data-v-6e95c164=""
+              ></path>
+              <path
+                d="M152.855 17.5861H160V21.1555H148.724V3.06799H152.855V17.5861Z"
+                data-v-6e95c164=""
+              ></path>
+              <path
+                d="M97.7115 17.6108H100.273C103.72 17.6108 106.018 15.4605 106.018 12.0382C106.018 8.78718 103.696 6.58813 100.371 6.58813H97.7115V17.6108ZM93.7028 3.06799H100.395C105.333 3.06799 110.247 5.68264 110.247 12.0626C110.247 18.0761 105.431 21.1551 100.64 21.1551L93.7028 21.1553V3.06799Z"
+                data-v-6e95c164=""
+              ></path>
+              <path
+                d="M125.334 14.375L128.058 7.30083L130.757 14.375H125.334ZM133.175 21.1555H137.715L130.264 3.06799H125.999L118.475 21.1555H122.894L124.227 17.5865H131.853L133.175 21.1555Z"
+                data-v-6e95c164=""
+              ></path>
+              <path
+                d="M21.1775 5.70464L15.8834 10.9992L10.589 5.70464L15.8834 0.411743L21.1775 5.70464Z"
+                data-v-6e95c164=""
+              ></path>
+              <path
+                d="M21.1775 16.2936L15.8834 21.5882L10.589 16.2936L15.8834 10.9993L21.1775 16.2936Z"
+                data-v-6e95c164=""
+              ></path>
+              <path
+                d="M10.5886 5.70506L5.29417 10.9997L0 5.70506L5.29417 0.411743L10.5886 5.70506Z"
+                data-v-6e95c164=""
+              ></path>
+              <path
+                d="M31.7655 5.70506L26.4715 10.9997L21.1769 5.70506L26.4715 0.411743L31.7655 5.70506Z"
+                data-v-6e95c164=""
+              ></path>
+            </svg>
+          </div>
+          <div class="header__menu" onclick="toggleMenu()">
+            <div class="header__hamburger">
+              <div class="hamburger__line"></div>
+              <div class="hamburger__line"></div>
+              <div class="hamburger__line"></div>
+            </div>
+
+            <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+            <svg
+              class="close-icon"
+              with="24px"
+              height="24px"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+                fill="#ffff"
+              />
+            </svg>
+
+            <!-- <img
+              src="/images/Mediamodifier-Design (5).svg"
+              alt="Close Menu"
+              class="close-icon"
+              id="closeIcon"
+            /> -->
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="headerMobile__nav" id="mobileMenu">
+          <!-- About Section -->
+          <div class="header__main-item">
+            <a
+              href="#"
+              class="header__nav-item"
+              onclick="toggleSubMenu('about-submenu')"
+              >About</a
+            >
+            <div id="about-submenu" class="header__submenu">
+              <a href="#" class="header__submenu-item">What is TIDAL?</a>
+              <a href="#" class="header__submenu-item">For Music</a>
+              <a href="#" class="header__submenu-item">For Artists</a>
+              <a href="#" class="header__submenu-item">Culture</a>
+              <a href="#" class="header__submenu-item">Magazine</a>
+              <a href="#" class="header__submenu-item">Pricing & Plans</a>
+            </div>
+          </div>
+
+          <!-- Support Section -->
+          <div class="header__main-item">
+            <a
+              href="#"
+              class="header__nav-item"
+              onclick="toggleSubMenu('support-submenu')"
+              >Support</a
+            >
+            <div id="support-submenu" class="header__submenu">
+              <!-- Nội dung submenu Support -->
+            </div>
+          </div>
+
+          <!-- Free Trial Button -->
+          <div class="header__sub">
+            <button class="header__button">Start Free Trial</button>
+          </div>
+
+          <!-- Login Button -->
+          <div class="header__sub">
+            <button class="header__button--login">Log in</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="backgroup-content">
+        <div class="content">
+          <div class="text-left">
+            <h1>Listen. Discover. Repeat.</h1>
+            <p>Hear your music in the best-in-class sound.</p>
+            <div class="button-container">
+              <button>Start Free Trial</button>
+            </div>
+          </div>
+          <div class="image-right">
+            <img
+              src="/images/hero-phones.ede7bd6 (1).png"
+              alt="Music Player Image"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="glide slider">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <!-- Slide 1 -->
+            <li class="glide__slide">
+              <div class="slide">
+                <div class="slide-content">
+                  <img
+                    src="/images/sound-quality.bff27e4.png"
+                    alt="Image 1"
+                    class="slide-image"
+                  />
+                  <div class="text-content">
+                    <h3>Hear more from your music.</h3>
+                    <p class="description">
+                      Experience your music like never before on TIDAL. Get the
+                      best-in-class sound formats like full lossless, HiRes
+                      FLAC, and Dolby Atmos.
+                    </p>
+                    <a href="#" class="learn-more-link">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Slide 2 -->
+            <li class="glide__slide">
+              <div class="slide">
+                <div class="slide-content">
+                  <img
+                    src="/images/discover.eec282c.png"
+                    alt="Image 2"
+                    class="slide-image"
+                  />
+                  <div class="text-content">
+                    <h3>110+ million tracks and counting.</h3>
+                    <p class="description">
+                      Discover your next big breakout artist or favorite song in
+                      our ad-free music library of over 110+ million tracks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Slide 3 -->
+            <li class="glide__slide">
+              <div class="slide">
+                <div class="slide-content">
+                  <img
+                    src="/images/mixes-radio.ae07b40.png"
+                    alt="Image 3"
+                    class="slide-image"
+                  />
+                  <div class="text-content">
+                    <h3>Mixes and Radio.</h3>
+                    <p class="description">
+                      Get a personalized playlist of songs curated to your
+                      tastes with My Mix, or explore new music with Artist
+                      Radio.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Slide 4 -->
+            <li class="glide__slide">
+              <div class="slide">
+                <div class="slide-content">
+                  <img
+                    src="/images/live-on-tidal.2b07870.png"
+                    alt="Image 4"
+                    class="slide-image"
+                  />
+                  <div class="text-content">
+                    <h3>Live on TIDAL</h3>
+                    <p class="description">
+                      Experience music in real-time with friends, family, or
+                      other fans with Live.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Slide 5 -->
+            <li class="glide__slide">
+              <div class="slide">
+                <div class="slide-content">
+                  <img
+                    src="/images/curated-playlists.36c7223.png"
+                    alt="Image 5"
+                    class="slide-image"
+                  />
+                  <div class="text-content">
+                    <h3>Curated playlists</h3>
+                    <p class="description">
+                      We’re keeping up with what’s next and best in culture.
+                      Listen to our team's original playlists, or stream guest
+                      playlists by your favorite artists.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Slide 6 -->
+            <li class="glide__slide">
+              <div class="slide">
+                <div class="slide-content">
+                  <img
+                    src="/images/offline-mode.8389db7.png"
+                    alt="Image 6"
+                    class="slide-image"
+                  />
+                  <div class="text-content">
+                    <h3>Offline Mode</h3>
+                    <p class="description">
+                      Listen on your terms on any device, whether you’re
+                      offline, off-the-beaten path, at home or in the car.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Slide 7 -->
+            <li class="glide__slide">
+              <div class="slide">
+                <div class="slide-content">
+                  <img
+                    src="/images/tidal-rising.d960598.png"
+                    alt="Image 7"
+                    class="slide-image"
+                  />
+                  <div class="text-content">
+                    <h3>TIDAL RISING</h3>
+                    <p class="description">
+                      Listen to the next wave of TIDAL RISING artists from
+                      around the world as they break conventions and genres.
+                    </p>
+                    <a href="#" class="learn-more-link">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <img
+              src="/images/Mediamodifier-Design (1).svg"
+              alt="Previous"
+              class="arrow-image"
+            />
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <img
+              src="/images/Mediamodifier-Design (2).svg"
+              alt="Next"
+              class="arrow-image"
+            />
+          </button>
+        </div>
+      </div>
+
+      <div class="sound-quality">
+        <video autoplay muted loop>
+          <source src="/video/audio-grid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="sound__quality--content">
+          <div class="sound-quality__title-wrapper">
+            <h2 class="sound-quality__title">Powerful sound for any purpose</h2>
+          </div>
+
+          <div class="sound-quality__options">
+            <div class="sound-quality__option sound-quality__option--max">
+              <h3 class="sound-quality__option-title">
+                Max
+                <span class="sound-quality__label sound-quality__label--max"
+                  >MAX</span
+                >
+                (Up to 24-bit, 192 kHz)
+              </h3>
+              <p class="sound-quality__description">
+                Experience best-in-class sound quality that opens up every
+                detail with HiRes Free Lossless Audio Codec (HiRes FLAC). Best
+                enjoyed on 5G or WiFi with a hardware connection.
+              </p>
+            </div>
+
+            <div class="sound-quality__option sound-quality__option--high">
+              <h3 class="sound-quality__option-title">
+                High
+                <span class="sound-quality__label sound-quality__label--high"
+                  >HIGH</span
+                >
+                (Up to 16-bit, 44.1 kHz)
+              </h3>
+              <p class="sound-quality__description">
+                Listen to over 110M songs in studio quality with FLAC. As an
+                open source format, every artist can create and deliver high
+                fidelity music with ease.
+              </p>
+            </div>
+
+            <div class="sound-quality__option sound-quality__option--low">
+              <h3 class="sound-quality__option-title">
+                Low
+                <span class="sound-quality__label sound-quality__label--low"
+                  >LOW</span
+                >
+                (Up to 320 kbps)
+              </h3>
+              <p class="sound-quality__description">
+                Get the music you love on the go without worrying about data.
+                Useful when you have a weak signal, are reaching your data cap,
+                or are running out of download space.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="plans">
+        <div class="plans-content">
+          <h2 class="plans__title">Press play on the perfect TIDAL plan</h2>
+          <div class="plans__container">
+            <div class="plans__card plans__card--individual">
+              <div class="plans__header">
+                <h3 class="plans__name">Individual</h3>
+                <span class="plans__badge">ADD-ONS AVAILABLE</span>
+              </div>
+              <p class="plans__subtitle">Powerful sound, on your terms</p>
+              <ul class="plans__features">
+                <li>110M+ tracks in lossless, HiRes FLAC, and Dolby Atmos</li>
+                <li>Ad-free, offline listening</li>
+                <li>
+                  Personalized mixes, editorial playlists, and Live sessions
+                </li>
+              </ul>
+              <div class="plans__addon">
+                <div class="plans_tile">
+                  <p class="plans__addon-title">Add-on</p>
+                </div>
+
+                <p class="plans__addon-name">DJ Extension</p>
+                <p class="plans__addon-description">
+                  Catalog access and stem separation via select DJ partners.
+                  <a href="#">Learn more</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="plans__card plans__card--family plans__card--center">
+              <div class="plans__header">
+                <h3 class="plans__name">Family (up to 6 members)</h3>
+              </div>
+              <p class="plans__subtitle">Music for the entire family</p>
+              <ul class="plans__features">
+                <li>110M+ tracks in lossless, HiRes FLAC, and Dolby Atmos</li>
+                <li>Ad-free, offline listening</li>
+                <li>Clean playlists and curated content for kids</li>
+                <li>Each member has an individual account</li>
+              </ul>
+            </div>
+
+            <div class="plans__card plans__card--student">
+              <div class="plans__header">
+                <h3 class="plans__name">Student</h3>
+                <span class="plans__badge">ADD-ONS AVAILABLE</span>
+              </div>
+              <p class="plans__subtitle">Eligible students save over 50%</p>
+              <ul class="plans__features">
+                <li>110M+ tracks in lossless, HiRes FLAC, and Dolby Atmos</li>
+                <li>Ad-free, offline listening</li>
+                <li>Curated study playlists</li>
+              </ul>
+              <div class="plans__addon">
+                <div class="plans_tile">
+                  <p class="plans__addon-title">Add-on</p>
+                </div>
+                <p class="plans__addon-name">DJ Extension</p>
+                <p class="plans__addon-description">
+                  Catalog access and stem separation via select DJ partners.
+                  <a href="#">Learn more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="music-carousel">
+        <div class="music-carousel__item">
+          <a href="link-to-song-1" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (1).jpg"
+                alt="Song 1"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">The Encore</div>
+              <div class="subtile">Curren$y</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-2" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (2).jpg"
+                alt="Song 2"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">ELYTE</div>
+              <div class="subtile">Yandel</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-3" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (3).jpg"
+                alt="Song 3"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">TORI. (+ a lil more)</div>
+              <div class="subtile">Tori Kelly</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-4" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (4).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-5" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (5).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-6" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (6).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-7" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (7).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-8" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (8).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-9" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (9).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-10" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (10).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-11" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (11).jpg
+                "
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-12" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (12).jpg
+                "
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-13" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (13).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-14" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (13).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+        <div class="music-carousel__item">
+          <a href="link-to-song-14" class="music-carousel__link">
+            <div class="name__music">
+              <img
+                src="/images/320x320 (13).jpg"
+                alt="Song 4"
+                class="music-carousel__image"
+              />
+            </div>
+            <div class="music__tile">
+              <div class="maintile">Live Breathe Fight</div>
+              <div class="subtile">Tamela Mann</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="faq">
+        <h2 class="faq__title">FAQ</h2>
+        <div class="faq__container">
+          <div class="faq__item">
+            <h3 class="faq__question">Can I try TIDAL for free?</h3>
+            <p class="faq__answer">
+              If you haven’t tried TIDAL before, you’ll be able to sign up for a
+              30 day free trial. TIDAL’s free trial gives you complete, ad-free
+              access to TIDAL’s lossless catalog and streaming features at no
+              cost.
+            </p>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__question">
+              Can I bring my playlists on other services to TIDAL?
+            </h3>
+            <p class="faq__answer">
+              Yes, we want your transition to TIDAL to be as smooth as possible.
+              Start importing your favorite playlists <a href="#">here</a>.
+            </p>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__question">What plan types does TIDAL offer?</h3>
+            <p class="faq__answer">
+              TIDAL’s most popular plan is the Individual plan. In addition to
+              that, we offer a high-value Family plan (for you plus up to 5
+              members), and a discounted Student plan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__wrapper">
+          <!-- Bốn cột nội dung chính trong footer -->
+          <div class="footer__column">
+            <h3 class="footer__title">Get Started</h3>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Download TIDAL</a></li>
+              <li><a href="#" class="footer__link">Pricing & Plans</a></li>
+              <li><a href="#" class="footer__link">Transfer Music</a></li>
+              <li><a href="#" class="footer__link">Supported Devices</a></li>
+              <li><a href="#" class="footer__link">Get Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">Discover TIDAL</h3>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">About</a></li>
+              <li><a href="#" class="footer__link">For Music</a></li>
+              <li><a href="#" class="footer__link">For Artists</a></li>
+              <li><a href="#" class="footer__link">Culture</a></li>
+              <li><a href="#" class="footer__link">Magazine</a></li>
+              <li><a href="#" class="footer__link">Originals</a></li>
+              <li><a href="#" class="footer__link">Rising</a></li>
+              <li><a href="#" class="footer__link">Sound Quality</a></li>
+              <li><a href="#" class="footer__link">TIDAL Connect</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">Account</h3>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Sign Up</a></li>
+              <li><a href="#" class="footer__link">Redeem Voucher</a></li>
+              <li><a href="#" class="footer__link">Redeem Giftcard</a></li>
+              <li><a href="#" class="footer__link">Manage Account</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">Company</h3>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">What is TIDAL?</a></li>
+              <li><a href="#" class="footer__link">Partners</a></li>
+              <li><a href="#" class="footer__link">Careers</a></li>
+              <li><a href="#" class="footer__link">Press</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__cta">
+          <img
+            src="/logo/Mediamodifier-Design (1).svg"
+            alt="Devices"
+            class="footer__image"
+          />
+          <a href="#" class="footer__button">Start Free Trial</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="icon-bar">
+          <p class="footer__description">
+            TIDAL is an artist-first, fan-centered music streaming platform that
+            delivers over 110 million songs in HiFi sound quality to the global
+            music community.
+          </p>
+
+          <div class="footer__social">
+            <a href="#" class="footer__social-link">
+              <!-- <img src="/images/x.svg" alt="X" -->
+              <svg
+                height="22.5"
+                width="22.5"
+                color="#9b9b9b"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                focusable="false"
+              >
+                <path
+                  d="M 14.285156 10.15625 L 23.21875 0 L 21.101562 0 L 13.34375 8.820312 L 7.148438 0 L 0 0 L 9.371094 13.335938 L 0 23.988281 L 2.117188 23.988281 L 10.308594 14.675781 L 16.851562 23.988281 L 24 23.988281 L 14.28125 10.15625 Z M 11.382812 13.453125 L 10.433594 12.125 L 2.878906 1.558594 L 6.132812 1.558594 L 12.226562 10.085938 L 13.175781 11.414062 L 21.101562 22.5 L 17.847656 22.5 Z M 11.382812 13.453125 "
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link"
+              ><svg
+                height="24"
+                fill="currentcolor"
+                width="24"
+                color="#9b9b9b"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                focusable="false"
+              >
+                <g fill-rule="evenodd">
+                  <path
+                    d="M19.7142857,6 C18.7675714,6 18,5.23242857 18,4.28571429 C18,3.339 18.7675714,2.57142857 19.7142857,2.57142857 C20.661,2.57142857 21.4285714,3.339 21.4285714,4.28571429 C21.4285714,5.23242857 20.661,6 19.7142857,6 M12.0714286,19.5714286 C7.92928571,19.5714286 4.57142857,16.2135714 4.57142857,12.0714286 C4.57142857,7.92928571 7.92928571,4.57142857 12.0714286,4.57142857 C16.2135714,4.57142857 19.5714286,7.92928571 19.5714286,12.0714286 C19.5714286,16.2135714 16.2135714,19.5714286 12.0714286,19.5714286 M17.3318571,0 L6.66814286,0 C3.00071429,0 0,3.00057143 0,6.66814286 L0,17.3318571 C0,20.9992857 3.00071429,24 6.66814286,24 L17.3318571,24 C20.9992857,24 24,20.9992857 24,17.3318571 L24,6.66814286 C24,3.00057143 20.9992857,0 17.3318571,0"
+                  ></path>
+                  <path
+                    d="M12,8 C9.79441509,8 8,9.79441509 8,12 C8,14.2055849 9.79441509,16 12,16 C14.2055849,16 16,14.2055849 16,12 C16,9.79441509 14.2055849,8 12,8"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link">
+              <svg
+                height="22.49"
+                fill="currentcolor"
+                width="22.49"
+                color="#9b9b9b"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 18 18"
+                focusable="false"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.9998202 0H.9930337C.44453934 0 0 .44453933 0 .9930337v16.0067865c0 .548427.44453933.9931011.9930337.9931011h8.61755057v-6.9678202H7.26573034V8.3095955h2.34485393V6.30701125c0-2.32395506 1.41937083-3.58941573 3.49253933-3.58941573.9931011 0 1.8465843.07388765 2.0952809.10692135v2.4287191l-1.4378427.00067416c-1.1274607 0-1.3458202.53575282-1.3458202 1.32195507V8.3095955h2.6890112l-.3500899 2.7155056h-2.3389213v6.9678202h4.5850786c.548427 0 .9930337-.4446741.9930337-.9931011V.9930337C17.9928539.44453934 17.5482472 0 16.9998202 0"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link">
+              <svg
+                width="35"
+                height="25"
+                viewBox="0 0 35 25"
+                fill="currentcolor"
+                color="#9b9b9b"
+                viewBox="0 0 35 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                focusable="false"
+              >
+                <path
+                  d="M33.3523 4.0823C32.9613 2.60746 31.8058 1.44617 30.3406 1.05133C27.6852 0.335205 17.0323 0.335205 17.0323 0.335205C17.0323 0.335205 6.37936 0.335205 3.72387 1.05133C2.25871 1.44617 1.10323 2.60746 0.712258 4.0823C0 6.75714 0 12.3352 0 12.3352C0 12.3352 0 17.9133 0.712258 20.5881C1.10323 22.0629 2.25871 23.2242 3.72387 23.6191C6.37936 24.3352 17.0323 24.3352 17.0323 24.3352C17.0323 24.3352 27.6852 24.3352 30.3406 23.6191C31.8058 23.2242 32.9613 22.0629 33.3523 20.5881C34.0645 17.9133 34.0645 12.3352 34.0645 12.3352C34.0645 12.3352 34.0645 6.75714 33.3523 4.0823ZM13.5484 17.4004V7.27004L22.4516 12.3352L13.5484 17.4004Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link">
+              <svg
+                height="26.4"
+                fill="currentcolor"
+                width="22.5"
+                color="#9b9b9b"
+                viewBox="0 0 23 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                focusable="false"
+              >
+                <path
+                  d="M12.001 8.66986C12.001 5.84602 12.001 3.02149 12.001 0.197644C12.001 0.00100366 12.001 0.000308819 12.1931 0.000308819C13.4767 0.000308819 14.7596 -0.000386024 16.0432 0.000308819C16.2539 0.000308819 16.2477 0.00169851 16.26 0.218489C16.342 1.70823 17.0619 3.0868 18.1163 4.11239C19.1074 5.07614 20.5879 5.97804 21.9968 5.96415C22.1276 5.96276 22.1668 6.00584 22.1675 6.13716C22.1778 7.40733 22.1936 8.6782 22.2081 9.94837C22.2081 9.96088 22.2081 9.97339 22.2081 9.9859C22.2067 10.2611 22.2067 10.2631 21.9417 10.2611C20.0862 10.2458 18.3799 9.71491 16.801 8.74421C16.695 8.6789 16.5945 8.60455 16.4872 8.54132C16.4438 8.51561 16.3888 8.51005 16.3392 8.49546C16.3261 8.54132 16.302 8.58648 16.302 8.63234C16.3 9.17293 16.3034 9.71421 16.3027 10.2548C16.3013 12.5881 16.3199 14.9221 16.291 17.2553C16.2683 19.1043 15.6372 20.7407 14.4485 22.1526C12.6879 24.2441 9.93827 25.3329 7.23474 24.9097C3.70046 24.3559 0.913649 21.2653 0.641094 17.682C0.541983 16.3833 0.750529 15.0582 1.27637 13.8666C2.65498 10.7398 5.9869 8.87971 9.32915 9.21045C9.45717 9.22296 9.49158 9.28202 9.49227 9.4064C9.50053 10.721 9.51429 12.035 9.52531 13.3496C9.52737 13.6199 9.51085 13.6324 9.24793 13.5643C6.78667 12.9313 4.45412 15.1993 4.92628 17.6987C5.2649 19.4913 7.01587 20.8032 8.8157 20.6232C10.6382 20.4405 11.9886 18.8299 11.9969 17.0115C12.0079 14.2307 12.0003 11.4499 12.001 8.66986Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <hr class="footer__divider" />
+
+        <div class="footer__info">
+          <div class="footer__copyright">
+            <img src="/logo/logo.svg" alt="TIDAL Logo" class="footer__logo" />
+            <p>© 2024 TIDAL Music AS</p>
+          </div>
+          <div class="footer__links--tile">
+            <div class="footer__links--main">
+              <a href="#" class="footer__link--subtlie">Privacy Notice</a>
+              <a href="#" class="footer__link--subtlie">Terms and Conditions</a>
+              <a href="#" class="footer__link--subtlie">Cookie Settings</a>
+              <a href="#" class="footer__link--subtlie"
+                >Accessibility Statement</a
+              >
+              <a href="#" class="footer__link--subtlie">Contact</a>
+            </div>
+            <div class="footer__language">
+              <a href="#" class="footer__language-button">🌐 English</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileMenu = document.getElementById("mobileMenu");
+      // Đảm bảo menu được ẩn đi khi tải trang
+      if (mobileMenu.classList.contains("open")) {
+        mobileMenu.classList.remove("open");
+      }
+      mobileMenu.style.display = "none"; // Đặt hiển thị mặc định là ẩn
+    });
+
+    // Toggle main menu khi nhấp vào biểu tượng hamburger
+    function toggleMenu() {
+      const mobileMenu = document.getElementById("mobileMenu");
+      const iconBar = document.querySelector(".header__hamburger");
+      const iconClose = document.querySelector(".close-icon");
+      if (
+        mobileMenu.style.display === "none" ||
+        mobileMenu.style.display === ""
+      ) {
+        mobileMenu.style.display = "flex"; // Mở menu
+        iconBar.style.display = "none";
+        iconClose.style.display = "block  ";
+      } else {
+        mobileMenu.style.display = "none"; // Đóng menu
+        iconClose.style.display = "none";
+      }
+    }
+    function toggleSubMenu(subMenuId) {
+      const subMenu = document.getElementById(subMenuId);
+      if (subMenu.style.display === "none" || subMenu.style.display === "") {
+        subMenu.style.display = "flex"; // Hiển thị submenu
+      } else {
+        subMenu.style.display = "none"; // Ẩn submenu
+      }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      // Chỉ khởi tạo slider khi màn hình nhỏ hơn 768px
+      if (window.innerWidth <= 768) {
+        tns({
+          container: ".my-slider",
+          items: 1, // Hiển thị 1 mục trên mobile
+          slideBy: "page",
+          autoplay: true,
+          autoplayTimeout: 3000,
+          controls: false,
+          nav: true, // Hiển thị nút điều hướng
+          loop: true,
+          mouseDrag: true, // Kéo bằng chuột
+        });
+      }
+    });
+  </script>
+</html>

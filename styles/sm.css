@@ -1,0 +1,185 @@
+@media screen and (max-width: 640px) {
+  .header .backgroup-content .content .text-left {
+    text-align: center;
+  }
+  .header__container {
+    display: none;
+  }
+  .header__container--mobile {
+    display: block !important;
+  }
+  .header .backgroup-content .content .text-left h1 {
+    font-size: 32px;
+  }
+  .header .backgroup-content .content {
+    flex-direction: column;
+  }
+  main .plans__container {
+    flex-direction: column;
+  }
+  main .plans__card {
+    width: 50%;
+  }
+  main .faq__container {
+    flex-direction: column;
+  }
+  main .faq {
+    padding: 0;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+    margin-left: -30px;
+  }
+  .footer__cta {
+    display: none;
+  }
+  .footer__bottom {
+    padding-left: 23px;
+  }
+  .footer__bottom .icon-bar {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .footer__divider {
+    display: none;
+  }
+  .footer .footer__links--tile .footer__links--main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__copyright {
+    flex-direction: column;
+  }
+  .footer__info {
+    flex-direction: column;
+  }
+  .footer .footer__links--tile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__description {
+    color: #9b9b9b;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    text-align: -webkit-left;
+  }
+}
+@media (max-width: 768px) {
+  /* Hero Section */
+  .header {
+    padding: 1rem;
+    .header__container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .header__logo img {
+        width: 120px;
+      }
+      .header__nav {
+        display: none; /* Ẩn menu ở màn hình nhỏ */
+      }
+    }
+    .header__sub {
+      width: 100%;
+    }
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+    .text-left {
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 18px;
+        margin: 12px 48px 24px;
+      }
+      .button-container button {
+        width: 100%;
+        max-width: 256.28px;
+        width: 100%;
+        padding: 16px 48px;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+    }
+    .image-right img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /* Slider Section */
+  .slider {
+    flex-direction: column;
+    gap: 10px;
+    .slide {
+      width: 100%;
+      .slide-content {
+        padding: 10px;
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  /* Sound Quality Section */
+  .my-slider {
+    display: block; /* Đảm bảo slider hoạt động */
+    overflow: hidden;
+  }
+
+  .sound-quality__option {
+    width: 100%; /* Chiều rộng 100% trên mobile */
+    text-align: center;
+    padding: 10px;
+  }
+
+  .tns-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Plans Section */
+  .plans__container {
+    flex-direction: column;
+    gap: 20px;
+    .plans__card {
+      width: 100%;
+      max-width: 345px;
+    }
+  }
+
+  /* FAQ Section */
+  .faq__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Footer Section */
+  .footer {
+    padding: 20px 0;
+    .footer__container {
+      flex-direction: column;
+      .footer__column {
+        margin-bottom: 20px;
+      }
+      .footer__social {
+        justify-content: center;
+      }
+    }
+    .footer__info {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      text-align: center;
+      .footer__links {
+        flex-direction: column;
+      }
+    }
+  }
+}
